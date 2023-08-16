@@ -123,6 +123,8 @@ Here's the Link to your Study Pack.`
 
     const question = `${promptIndex + 1} - ${currentPrompt.question}`
 
+    // options
+
     session.currentStep++
     session.data.currentPrompt = currentPrompt
 
@@ -216,6 +218,18 @@ telegramBot.on("message", async (message) => {
               subjectLink =
                 "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Science.pdf"
               break
+            case "Art":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Art.pdf"
+              break
+            case "Physical Education":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Physical-Education.pdf"
+              break
+            case "Answers":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Answers.pdf"
+              break
             default:
               subjectLink = "https://google.com"
               break
@@ -237,6 +251,22 @@ telegramBot.on("message", async (message) => {
             case "Science":
               subjectLink =
                 "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Science.pdf"
+              break
+            case "Logic, Math Puzzles and Games":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Logic-math-puzzles-and-games.pdf"
+              break
+            case "Well - Being":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Well-Being.pdf"
+              break
+            case "Writing Prompts":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Writing-Prompts.pdf"
+              break
+            case "Answers":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Answers.pdf"
               break
             default:
               subjectLink = "https://google.com"
@@ -260,6 +290,22 @@ telegramBot.on("message", async (message) => {
               subjectLink =
                 "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Science.pdf"
               break
+            case "Logic, Math and Games":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-English.pdf"
+              break
+            case "Well - Being":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Well-Being.pdf"
+              break
+            case "Writing Prompts":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Writing-prompts.pdf"
+              break
+            case "Answers":
+              subjectLink =
+                "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Answers.pdf"
+              break
             default:
               subjectLink = "https://google.com"
               break
@@ -270,18 +316,13 @@ telegramBot.on("message", async (message) => {
           studentClass === "SSS 3"
         ) {
           switch (selectedOption.value) {
-            case "English":
-              subjectLink =
-                "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-English.pdf"
-              break
             case "Maths":
               subjectLink =
                 "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Maths.pdf"
               break
-            case "Science":
+            case "Answers":
               subjectLink =
-                "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Science.pdf"
-              break
+                "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Answers.pdf"
             default:
               subjectLink = "https://google.com"
               break
@@ -335,42 +376,6 @@ const getPackLink = (value: string): string => {
     default:
       return "https://oeqalagos.com/"
   }
-}
-
-const subLinks = {
-  pri1to3: {
-    English:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-English.pdf",
-    Mathematics:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Mathematics.pdf",
-    Art: "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Art.pdf",
-    PhyEdu:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Physical-Education.pdf",
-    Science:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Science.pdf",
-    Answers:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Answers.pdf",
-  },
-  pri4to6: {
-    English:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-English.pdf",
-    Mathematics:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Maths.pdf",
-    Science:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Science.pdf",
-    WellBeing:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Well-Being.pdf",
-    WritingPrompt:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Writing-prompts.pdf",
-    Answers:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Answers.pdf",
-  },
-  ss1to3: {
-    Mathematics:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Maths.pdf",
-    Answers:
-      "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Answers.pdf",
-  },
 }
 
 const captureUserName = async (chatId: number) => {
