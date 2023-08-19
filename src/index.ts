@@ -66,8 +66,8 @@ const welcomeMessage = `
 Instructions:
 1. Read the Prompt carefully.
 2. Reply with your chosen option.
-3. Send 'hi' to start a conversation
-4. Send '/start' to Restart From the Beginning.
+3. I will take you to the study packs homepage if you select a subject that is not available for your class. 
+4. Send or click -> '/start' to Restart From the Beginning.
 5. Enjoy the conversation!
 `
 
