@@ -17,7 +17,7 @@ if (
         "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Science.pdf"
       break
     default:
-      subjectLink = "https://google.com"
+      subjectLink = "https://oeqalagos.com/study-packs/"
       break
   }
 } else if (
@@ -39,7 +39,7 @@ if (
         "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Science.pdf"
       break
     default:
-      subjectLink = "https://google.com"
+      subjectLink = "https://oeqalagos.com/study-packs/"
       break
   }
 } else if (
@@ -61,7 +61,7 @@ if (
         "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Science.pdf"
       break
     default:
-      subjectLink = "https://google.com"
+      subjectLink = "https://oeqalagos.com/study-packs/"
       break
   }
 } else if (
@@ -83,7 +83,7 @@ if (
         "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Science.pdf"
       break
     default:
-      subjectLink = "https://google.com"
+      subjectLink = "https://oeqalagos.com/study-packs/"
       break
   }
 } else {

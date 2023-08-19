@@ -46,7 +46,7 @@ const telegramBotToken =
   process.env.TELEGRAM_BOT_TOKEN ||
   `6458448932:AAHWKZiUp05ScxCM1TtRLF57aJULGuNL8ko`
 
-// const webhookUrl = "https://telegram-bot-api-tawny.vercel.app"
+const webhookUrl = "https://telegram-bot-api-tawny.vercel.app"
 
 const telegramBot = new TelegramBot(telegramBotToken, {
   polling: true,
@@ -231,7 +231,7 @@ telegramBot.on("message", async (message) => {
                 "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Answers.pdf"
               break
             default:
-              subjectLink = "https://google.com"
+              subjectLink = "https://oeqalagos.com/study-packs/"
               break
           }
         } else if (
@@ -269,7 +269,7 @@ telegramBot.on("message", async (message) => {
                 "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Answers.pdf"
               break
             default:
-              subjectLink = "https://google.com"
+              subjectLink = "https://oeqalagos.com/study-packs/"
               break
           }
         } else if (
@@ -307,7 +307,7 @@ telegramBot.on("message", async (message) => {
                 "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Answers.pdf"
               break
             default:
-              subjectLink = "https://google.com"
+              subjectLink = "https://oeqalagos.com/study-packs/"
               break
           }
         } else if (
@@ -324,11 +324,11 @@ telegramBot.on("message", async (message) => {
               subjectLink =
                 "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Answers.pdf"
             default:
-              subjectLink = "https://google.com"
+              subjectLink = "https://oeqalagos.com/study-packs"
               break
           }
         } else {
-          subjectLink = "https://google.com/wrong"
+          subjectLink = "https://oeqalagos.com/study-packs/"
           console.log("something went wrong")
         }
 
@@ -374,7 +374,7 @@ const getPackLink = (value: string): string => {
     case "Tips for Virtual Education":
       return "https://oeqalagos.com/wp-content/uploads/2020/04/Tips-for-Virtual-Education-min.pdf"
     default:
-      return "https://oeqalagos.com/"
+      return "https://oeqalagos.com/study-packs/"
   }
 }
 

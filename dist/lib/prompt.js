@@ -36,6 +36,24 @@ exports.prompts = [
             { value: "Maths", text: "Maths" },
             { value: "Science", text: "Science" },
             { value: "Biology", text: "Biology" },
+            { value: "Art", text: "Art" },
+            { value: "Physical Education", text: "Physical Education" },
+            {
+                value: "Logic, Math Puzzles and Games",
+                text: "Logic, Math Puzzles and Games",
+            },
+            {
+                value: "Well - Being",
+                text: "Well - Being",
+            },
+            {
+                value: "Writing Prompts",
+                text: "Writing Prompts",
+            },
+            {
+                value: "Answers",
+                text: "Answers",
+            },
         ],
     },
     {

@@ -76,6 +76,7 @@ Here's the Link to your Study Pack.`;
         const currentPrompt = prompt_1.prompts[promptIndex];
         const options = currentPrompt.response.map((resp) => [{ text: resp.text }]);
         const question = `${promptIndex + 1} - ${currentPrompt.question}`;
+        // options
         session.currentStep++;
         session.data.currentPrompt = currentPrompt;
         const replyMarkup = {
@@ -151,8 +152,20 @@ telegramBot.on("message", async (message) => {
                             subjectLink =
                                 "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Science.pdf";
                             break;
+                        case "Art":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Art.pdf";
+                            break;
+                        case "Physical Education":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Physical-Education.pdf";
+                            break;
+                        case "Answers":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Answers.pdf";
+                            break;
                         default:
-                            subjectLink = "https://google.com";
+                            subjectLink = "https://oeqalagos.com/study-packs/";
                             break;
                     }
                 }
@@ -172,8 +185,24 @@ telegramBot.on("message", async (message) => {
                             subjectLink =
                                 "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Science.pdf";
                             break;
+                        case "Logic, Math Puzzles and Games":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Logic-math-puzzles-and-games.pdf";
+                            break;
+                        case "Well - Being":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Well-Being.pdf";
+                            break;
+                        case "Writing Prompts":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Writing-Prompts.pdf";
+                            break;
+                        case "Answers":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Answers.pdf";
+                            break;
                         default:
-                            subjectLink = "https://google.com";
+                            subjectLink = "https://oeqalagos.com/study-packs/";
                             break;
                     }
                 }
@@ -193,8 +222,24 @@ telegramBot.on("message", async (message) => {
                             subjectLink =
                                 "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Science.pdf";
                             break;
+                        case "Logic, Math and Games":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-English.pdf";
+                            break;
+                        case "Well - Being":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Well-Being.pdf";
+                            break;
+                        case "Writing Prompts":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Writing-prompts.pdf";
+                            break;
+                        case "Answers":
+                            subjectLink =
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Answers.pdf";
+                            break;
                         default:
-                            subjectLink = "https://google.com";
+                            subjectLink = "https://oeqalagos.com/study-packs/";
                             break;
                     }
                 }
@@ -202,25 +247,20 @@ telegramBot.on("message", async (message) => {
                     studentClass === "SSS 2" ||
                     studentClass === "SSS 3") {
                     switch (selectedOption.value) {
-                        case "English":
-                            subjectLink =
-                                "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-English.pdf";
-                            break;
                         case "Maths":
                             subjectLink =
                                 "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Maths.pdf";
                             break;
-                        case "Science":
+                        case "Answers":
                             subjectLink =
-                                "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Science.pdf";
-                            break;
+                                "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Answers.pdf";
                         default:
-                            subjectLink = "https://google.com";
+                            subjectLink = "https://oeqalagos.com/study-packs";
                             break;
                     }
                 }
                 else {
-                    subjectLink = "https://google.com/wrong";
+                    subjectLink = "https://oeqalagos.com/study-packs/";
                     console.log("something went wrong");
                 }
                 console.log("make sure > ", subjectLink);
@@ -267,30 +307,8 @@ const getPackLink = (value) => {
         case "Tips for Virtual Education":
             return "https://oeqalagos.com/wp-content/uploads/2020/04/Tips-for-Virtual-Education-min.pdf";
         default:
-            return "https://oeqalagos.com/";
+            return "https://oeqalagos.com/study-packs/";
     }
-};
-const subLinks = {
-    pri1to3: {
-        English: "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-English.pdf",
-        Mathematics: "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Mathematics.pdf",
-        Art: "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Art.pdf",
-        PhyEdu: "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Physical-Education.pdf",
-        Science: "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Science.pdf",
-        Answers: "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-1-3-Answers.pdf",
-    },
-    pri4to6: {
-        English: "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-English.pdf",
-        Mathematics: "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Maths.pdf",
-        Science: "https://oeqalagos.com/wp-content/uploads/2023/08/Pry-4-6-Science.pdf",
-        WellBeing: "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Well-Being.pdf",
-        WritingPrompt: "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Writing-prompts.pdf",
-        Answers: "https://oeqalagos.com/wp-content/uploads/2023/08/Jss1-3-Answers.pdf",
-    },
-    ss1to3: {
-        Mathematics: "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Maths.pdf",
-        Answers: "https://oeqalagos.com/wp-content/uploads/2023/08/SS1-3-Answers.pdf",
-    },
 };
 const captureUserName = async (chatId) => {
     // Capture response
@@ -343,6 +361,6 @@ telegramBot.on("polling_error", (error) => {
 });
 // Start Server
 app.listen(PORT, async () => {
-    await telegramBot.setWebHook(webhookUrl);
+    // await telegramBot.setWebHook(webhookUrl)
     console.log(`Listening on PORT: ${PORT}`);
 });
